@@ -1,0 +1,44 @@
+{
+  "patient_summary": {
+    "overall_brain_state": "Attention Difficulties",
+    "alertness_level": "4.7/10",
+    "stress_level": "5.6/10",
+    "attention_score": "4.0/10",
+    "cognitive_state": "Normal",
+    "seizure_risk": "Critical Risk",
+    "confidence_level": "88.0%"
+  },
+  "clinical_interpretations": {
+    "alertness": "Moderate alertness - Mild fatigue or reduced focus may be present",
+    "stress": "Moderate stress - Within normal range for daily activities",
+    "attention": "Attention concerns - May warrant comprehensive cognitive assessment",
+    "cognitive": "Normal (confidence: 40.0%)",
+    "seizure_risk": "Critical Risk (confidence: 40.1%)"
+  },
+  "interpretability": {
+    "most_important_channels": [
+      "F3",
+      "F4",
+      "C3"
+    ],
+    "temporal_focus": {
+      "focus_period": "Middle segment (1-3 seconds)",
+      "attention_consistency": "High",
+      "dominant_patterns": "Sustained attention detected"
+    },
+    "model_confidence": "88.0%",
+    "analysis_quality": "High"
+  },
+  "recommendations": [
+    "Consider comprehensive cognitive function evaluation",
+    "Immediate neurological consultation recommended"
+  ],
+  "technical_details": {
+    "input_channels": 8,
+    "input_duration_seconds": 4.0,
+    "sampling_rate_hz": 250,
+    "analysis_timestamp": "2025-08-23 14:51:05",
+    "model_version": "EEGPT-Pretrained",
+    "processing_device": "cpu"
+  }
+}
