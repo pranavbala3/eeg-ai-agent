@@ -81,18 +81,3 @@ def save_to_json(dictionary_data, filepath):
     """Save a dictionary to a JSON file."""
     with open(filepath, 'w') as f:
         json.dump(dictionary_data, f, indent=2)
-
-def main():
-    """Main entry point for running EEGPT patient assessment workflow."""
-    voltage_data, sampling_rate, channel_names = generate_synthetic_eeg_data()
-
-    assessment = run_patient_assessment(voltage_data, sampling_rate, channel_names)
-    report = format_patient_assessment(assessment)
-    print(report)
-
-    save_path = f'data/patient_eeg_assessment-{uuid.uuid4()}.json'
-    save_to_json(assessment, save_path)
-    print("\n✓ Complete assessment saved to 'patient_eeg_assessment.json'")
-
-
-main()

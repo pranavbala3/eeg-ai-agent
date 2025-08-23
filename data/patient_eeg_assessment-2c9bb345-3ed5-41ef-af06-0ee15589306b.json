@@ -1,19 +1,19 @@
 {
   "patient_summary": {
     "overall_brain_state": "Normal Brain Activity",
-    "alertness_level": "5.1/10",
-    "stress_level": "4.7/10",
-    "attention_score": "5.5/10",
+    "alertness_level": "6.1/10",
+    "stress_level": "5.1/10",
+    "attention_score": "4.8/10",
     "cognitive_state": "Normal",
-    "seizure_risk": "Critical Risk",
+    "seizure_risk": "Low Risk",
     "confidence_level": "88.0%"
   },
   "clinical_interpretations": {
-    "alertness": "Moderate alertness - Mild fatigue or reduced focus may be present",
+    "alertness": "Good alertness - Normal waking consciousness and attention",
     "stress": "Moderate stress - Within normal range for daily activities",
     "attention": "Moderate attention - Some difficulty with sustained concentration",
-    "cognitive": "Normal (confidence: 39.6%)",
-    "seizure_risk": "Critical Risk (confidence: 26.8%)"
+    "cognitive": "Normal (confidence: 33.8%)",
+    "seizure_risk": "Low Risk (confidence: 30.8%)"
   },
   "interpretability": {
     "most_important_channels": [
@@ -30,13 +30,13 @@
     "analysis_quality": "High"
   },
   "recommendations": [
-    "Immediate neurological consultation recommended"
+    "Normal findings - routine monitoring sufficient"
   ],
   "technical_details": {
     "input_channels": 8,
     "input_duration_seconds": 4.0,
     "sampling_rate_hz": 250,
-    "analysis_timestamp": "2025-08-23 13:30:44",
+    "analysis_timestamp": "2025-08-23 13:39:17",
     "model_version": "EEGPT-Pretrained",
     "processing_device": "cpu"
   }
