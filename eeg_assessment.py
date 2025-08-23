@@ -1,7 +1,7 @@
 import numpy as np
 from typing import Dict, List, Optional
 import json
-import uuid
+import pyedflib
 
 from EEGPTPatientAssessment import EEGPTPatientAssessment
 
@@ -42,6 +42,35 @@ def generate_synthetic_eeg_data(n_channels=8, n_timepoints=1000, sampling_rate=2
 def run_patient_assessment(voltage_data, sampling_rate=250, channel_names=None):
     """Run the EEGPT model to assess patient EEG data and return the assessment dictionary."""
     return analyze_patient_eeg(voltage_data, sampling_rate, channel_names)
+
+def edf_to_numpy(file_path):
+    """
+    Load EEG data from an EDF file using pyedflib and return it in the format:
+    (voltage_data, sampling_rate, channel_names)
+    where:
+        - voltage_data: np.ndarray of shape (n_channels, n_timepoints)
+        - sampling_rate: float
+        - channel_names: list of str
+    """
+    f = pyedflib.EdfReader(file_path)
+    
+    n_channels = f.signals_in_file
+    n_samples = f.getNSamples()[0]  # assumes all channels have the same length
+    
+    # Preallocate array (n_channels, n_timepoints)
+    voltage_data = np.zeros((n_channels, n_samples))
+    
+    channel_names = f.getSignalLabels()
+    
+    for i in range(n_channels):
+        voltage_data[i, :] = f.readSignal(i)
+    
+    # Assuming constant sampling rate across channels
+    sampling_rate = f.getSampleFrequency(0)
+    
+    f.close()
+    
+    return voltage_data, sampling_rate, channel_names
 
 def format_patient_assessment(assessment):
     """Format the patient assessment dictionary into a readable string report."""
