@@ -1,7 +1,12 @@
-eeg ai agent
+Submission for Open Source AI Hackathon #20 - AI Agents
+
+## EEG AI Agent
+This project provides an intelligent EEG analysis system that combines automated signal processing with conversational AI to analyze electroencephalography (EEG) data and answer clinical questions. The system is designed to assist medical professionals and researchers by providing both detailed EEG assessments and access to medical knowledge through natural language queries.
 
 
-## Download Pretrained EEGPT Model
+
+## Instructions
+### Download Pretrained EEGPT Model
 
 1. **Download the pretrained weights:**
    - Go to: https://figshare.com/s/e37df4f8a907a866df4b
